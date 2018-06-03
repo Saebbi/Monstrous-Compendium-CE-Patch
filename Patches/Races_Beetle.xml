@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Monstrous Compendium</modName>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Beetle"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>QuadrupedLow</bodyShape>
+				</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Beetle"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>Bite</label>
+							<capacities><li>Bite</li></capacities>
+							<power>12</power>
+							<cooldownTime>2.15</cooldownTime>
+							<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+							<armorPenetration>0.16</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<capacities><li>Blunt</li></capacities>
+							<power>10</power>
+							<cooldownTime>2.15</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.1</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Head Claw</label>
+							<capacities><li>Stab</li></capacities>
+							<power>14</power>
+							<cooldownTime>2.2</cooldownTime>
+							<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+							<armorPenetration>0.22</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "FireBeetle"]</xpath>
+				<value>
+					<!--Accuracy needs to be high, because well animal don't have shooting skill-->
+					<verbs>
+						<li Class="CombatExtended.VerbPropertiesCE">
+							<recoilAmount>0.5</recoilAmount>
+							<verbClass>Verb_Shoot</verbClass>
+							<accuracyTouch>0.8</accuracyTouch>
+							<accuracyShort>1</accuracyShort>
+							<accuracyMedium>0.95</accuracyMedium>
+							<accuracyLong>0.8</accuracyLong>
+							<hasStandardCommand>true</hasStandardCommand>
+							<defaultProjectile>Bullet_Firebeetle</defaultProjectile>
+							<warmupTime>2.3</warmupTime>
+							<burstShotCount>5</burstShotCount>
+							<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+							<range>8</range>
+							<soundCast>Pawn_BigInsect_Call</soundCast>
+							<muzzleFlashScale>2</muzzleFlashScale>
+						</li>
+					</verbs>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="FireBeetle"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>QuadrupedLow</bodyShape>
+				</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="FireBeetle"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>Bite</label>
+							<capacities><li>Bite</li></capacities>
+							<power>12</power>
+							<cooldownTime>2.15</cooldownTime>
+							<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+							<armorPenetration>0.16</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<capacities><li>Blunt</li></capacities>
+							<power>10</power>
+							<cooldownTime>2.15</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.1</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Head Claw</label>
+							<capacities><li>Stab</li></capacities>
+							<power>14</power>
+							<cooldownTime>2.2</cooldownTime>
+							<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+							<armorPenetration>0.22</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
+
+
+
+
+
+
+
+
+
+
+
+
+

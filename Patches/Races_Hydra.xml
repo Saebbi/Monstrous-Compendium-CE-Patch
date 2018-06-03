@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Monstrous Compendium</modName>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>*/ThingDef[defName="Hydra"]</xpath>
+				<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>Quadruped</bodyShape>
+				</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="Hydra"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>First head bite</label>
+							<capacities><li>hydrabite</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Second head bite</label>
+							<capacities><li>hydrabite</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Third head bite</label>
+							<capacities><li>hydrabite</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Fourth head bite</label>
+							<capacities><li>hydrabite</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Fifth head bite</label>
+							<capacities><li>hydrabite</li></capacities>
+							<power>18</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<armorPenetration>0.35</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>First head</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>14</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.14</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Second head</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>14</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.14</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Third head</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>14</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.14</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Fourth head</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>14</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.14</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>Fifth head</label>
+							<capacities><li>Blunt</li></capacities>
+							<power>14</power>
+							<cooldownTime>1.5</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<armorPenetration>0.14</armorPenetration>
+						</li>
+					</tools>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
+
+
+
+
+
+
+
+
+
+
+
+
+
